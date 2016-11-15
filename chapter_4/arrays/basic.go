@@ -41,4 +41,12 @@ func main() {
 	for _, x := range ab {
 		fmt.Println(*x)
 	}
+	array := [4][2]int{{10, 11}, {20, 21}, {30, 31}, {40, 41}}
+	for _, j := range array {
+		fmt.Println(j)
+	}
+	array = [4][2]int{0: {0: 11}, 2: {0: 1, 1: 2}}
+	for _, j := range array {
+		fmt.Println(j)
+	}
 }
