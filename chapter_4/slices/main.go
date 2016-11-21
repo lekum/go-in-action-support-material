@@ -9,4 +9,12 @@ func main() {
 	empty_slice := make([]int, 0)
 	var nil_slice []int
 	fmt.Println(empty_slice, nil_slice)
+	slice := []int{10, 20, 30, 40, 50}
+	fmt.Println(slice)
+	slice[1] = 25
+	fmt.Println(slice)
+	fmt.Println(slice[1:3])
+	slice3 := slice[2:3]
+	slice3[0] = -3
+	fmt.Println(slice)
 }
