@@ -14,7 +14,12 @@ func main() {
 	slice[1] = 25
 	fmt.Println(slice)
 	fmt.Println(slice[1:3])
-	slice3 := slice[2:3]
+	slice3 := slice[2:4]
 	slice3[0] = -3
 	fmt.Println(slice)
+	slice3 = append(slice3, 80)
+	fmt.Println(slice)
+	source := []string{"Apple", "Orange", "Plum", "Banana", "Grape"}
+	slice4 := source[2:3:4]
+	fmt.Println(slice4)
 }
