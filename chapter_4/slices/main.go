@@ -20,6 +20,15 @@ func main() {
 	slice3 = append(slice3, 80)
 	fmt.Println(slice)
 	source := []string{"Apple", "Orange", "Plum", "Banana", "Grape"}
+	fmt.Println(source)
 	slice4 := source[2:3:4]
 	fmt.Println(slice4)
+	// Restricting the capacity means that we detach from the undelying array
+	slice5 := source[2:3:3]
+	slice5 = append(slice5, "Kiwi")
+	fmt.Println(slice5)
+	fmt.Println(source)
+	slice5 = append(slice5, slice4...)
+	fmt.Println(slice5)
+
 }
