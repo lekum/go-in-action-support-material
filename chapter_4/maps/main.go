@@ -11,4 +11,10 @@ func main() {
 	} else {
 		fmt.Println(col, "not found")
 	}
+	for key, value := range colors {
+		fmt.Println(key, "->", value)
+	}
+	colors["AliceBlue"] = "#f0f8ff"
+	delete(colors, "Blue")
+	fmt.Println(colors)
 }
