@@ -11,7 +11,7 @@ type user struct {
 	email string
 }
 
-func (u user) notify() {
+func (u *user) notify() {
 	fmt.Printf("Sending email to %s<%s>\n",
 		u.name,
 		u.email)
@@ -23,6 +23,6 @@ func sendNotification(n notifier) {
 
 func main() {
 	u := user{name: "Bill", email: "bill@gmail.com"}
-	sendNotification(u)
+	sendNotification(&u)
 
 }
