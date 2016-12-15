@@ -26,6 +26,12 @@ type admin struct {
 	level string
 }
 
+func (a *admin) notify() {
+	fmt.Printf("Sending admin email to %s<%s>\n",
+		a.name,
+		a.email)
+}
+
 func main() {
 	ad := admin{
 		user: user{
@@ -35,4 +41,6 @@ func main() {
 		level: "super",
 	}
 	sendNotification(&ad)
+	ad.user.notify()
+	ad.notify()
 }
